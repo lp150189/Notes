@@ -1,0 +1,61 @@
+%%This is a very basic article template.
+%%There is just one section and two subsections.
+\documentclass{article}
+
+\begin{document}
+
+
+\section{Statistic}
+
+\subsection{Subtitle}
+Tuesday, April 23, 2013.\\
+
+Chapter 5: Probability Desities\\
+	For continous random variable, the outcome are represented by
+	intervals on the real line.\\
+	Interval [-------------------] has infinite number of value\\
+	The probability distribution for a continous random variable is 
+	represented by the area under a curve $f(x)$ => probability density 
+	function\\
+	Discrete $ P(\bar{X} = x)$ continous when $P(a<=\bar{X}<=b)$ =
+	``Intergration from a to b'' f(x)dx\\
+	If you try to find $ P(\bar{X} = x)$  = ``intergration x to x'' f(x)dx=0
+	, then => the probability of a specfic value =0\\
+	However we are only looking at intervals
+	$P(a<=\bar{X}<=b)$  = $P(a<\bar{X}<b)$  with at a and b = 0\\
+	
+	The probability of a function from value a to b will be the area below 
+	the curve of the function from a to b\\
+	\\
+	Cumulative probability functions\\
+	$F(x) = P(\bar{X} <= x)$ = ``integral from -infinity to x `` f(t)dt\\
+	
+	Example: Probability density function\\
+	$ f(x) = e^{-x} when x>=0  or 0  x<0$\\
+	
+	$P(1<=\bar{X}<=5)$ = ``integral 5 to 1'' $e^{x}dx$ = .239\\
+	
+	Example: Probability density function
+	
+	$f(x) = 0  when x <0|| 1/2 when 0<x<1 || 2-x when 1<x<2|| 0 when x> 2$
+	
+	$P(.5<=\bar{X}<=1.5) = 5/8$
+	
+	Mean of the Probability density
+	weighted average\\
+	M = \[ \int_{big}^{big}xf(x)\,dx.\] 
+	
+	Variance of probability density \\
+	\sigma^2 =  \[ \int_{big}^{big}(x-\mu)^2f(x)\,dx.\]
+
+
+\subsection{5.2 Normal Distribution}
+	1)area uner curve = 1\\
+	2) highes pt at mean\\
+	3) Symmetric about \mu\\
+	4) mean = median = mode\\
+	5)Each unique normal distribution can describe by \mu, \sigma \\
+	
+	$f(x, \mu, \sigma) = \frac{1}{2\pi}$
+
+\end{document}
