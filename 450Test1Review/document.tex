@@ -36,7 +36,7 @@ b) Design $L_2 = L_1^'$
 \pagebreak
 
 \underline{Question 5:}\\
- Convert the AFSA to DFSA\\
+ Convert the AFSA to DFSA\\\\
  \begin{tabular}{|c|c|c|}
 \hline 
 M & 0 & 1\tabularnewline
@@ -44,18 +44,112 @@ M & 0 & 1\tabularnewline
 \hline 
 1 & 2\wedge3 & 1\tabularnewline
 \hline 
-2 &  & \tabularnewline
+2 & 3 \vee 4 &2 \vee 4 \tabularnewline
 \hline 
-3 &  & \tabularnewline
+3 & 3 \vee 1 & 3 \tabularnewline
 \hline 
-4 &  & \tabularnewline
+4 & 1 \wedge 4 &  2 \wedge 3\tabularnewline
 \hline 
 \end{tabular}
- 
-     
-\subsection{Another subtitle}
 
-More plain text.
+The initial state is 1, and the final state is also 1
+\pagebreak
+
+
+
+\underline{Question 6}\\
+Given the AFSA, where 1 is the initial state, and 1 and 3 are final
+states
+
+ \begin{tabular}{|c|c|c|}
+\hline 
+M & 0 & 1\tabularnewline
+\hline 
+\hline 
+1 & 1& 1 \vee 3\tabularnewline
+\hline 
+2 & 2 \wedge 4 & 3 \wedge 4\tabularnewline
+\hline 
+3 & 3 & 4 \tabularnewline
+\hline 
+4 & 2 \vee 3 &  1\vee 4\tabularnewline
+\hline 
+\end{tabular}\\
+\\
+
+a) Draw the computation tree for string 101100 and explain if it is an accepting 
+computation\\
+\\
+\indent b)Convert M to its equivalent DFSA. Represent all of
+the states in CNF and simplify them. Don’t forget to indicate final states.
+\pagebreak
+     
+\subsection{Two way FSA}
+\underline{Question 7:}\\
+
+Given machine M, where 1 is initial state, and 3 is final state\\\\
+
+ \begin{tabular}{|c|c|c|}
+\hline 
+M & a & b\tabularnewline
+\hline 
+\hline 
+1 & 2L& 3R\tabularnewline
+\hline 
+2 & 4L  & 2R\tabularnewline
+\hline 
+3 & 2L & 4R \tabularnewline
+\hline 
+4 & 4R &  1L\tabularnewline
+\hline 
+\end{tabular}\\
+\\
+
+a) Construct the Rebound Table\\
+\indent b) Convert machine M to 1 DFSA using the Rebound Table\\
+\indent c) Simulate the 2 dfsa to see if ba or bb string got rejected 
+or accepted\\
+\pagebreak
+
+\underline { Question 8}\\
+Given machine M, where $q_1$ is the final state\\\\
+ \begin{tabular}{|c|c|c|}
+\hline 
+M & 0 & 1\tabularnewline
+\hline 
+\hline 
+$q_0$ & $q_0$R& $q_1R$\tabularnewline
+\hline 
+$q_1$ & $q_1$R  & $q_2$L\tabularnewline
+\hline 
+$q_2$ & $q_0$R & $q_2$L \tabularnewline
+\hline  
+\end{tabular}\\
+\\
+a) Construct the Rebound Table for machine M\\
+b) Simulate the 2dfsa to show that 1001 is accepted by M
+\pagebreak
+
+\underline{Question 9}\\
+Given the following 2-way deterministic fsa (2dfsa), where state 1 is the initial state, 
+and states 2 and 3 are final states.\\
+(a) Simulate the 2dfsa and show how the string babb is accepted.\\ 
+(b) Construct the rebound tables and the equivalent 1dfsa partially only for consuming 
+the string babb\\
+ \center \begin{tabular}{|c|c|c|}
+\hline 
+M & a & b\tabularnewline
+\hline 
+\hline 
+1 & 2R& 3R\tabularnewline
+\hline 
+2 & 4L  & 2R\tabularnewline
+\hline 
+3 & 4R & 2L \tabularnewline
+\hline 
+4 & 1R &  4L\tabularnewline
+\hline 
+\end{tabular}\\
 
 
 \end{document}
