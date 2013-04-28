@@ -1,0 +1,327 @@
+%%This is a very basic article template.
+%%There is just one section and two subsections.
+\documentclass{article}
+
+\title{ CS-480\\ Midterm Review}
+\begin{document}
+\maketitle
+
+\section{ Quality Insurance}
+
+\subsection{Type of bugs}
+
+-\textbf{Race conditions and deadlocks}: Racecondition is the beahvior
+of an electronic of software system where output is dependent on the sequence or timing of other
+uncontrollable events. \textbf{For example:} Multi threads application has many
+threads that have the access to the same shared resource and can change these resource
+at the same time which make the output becomes very unpredictable(bugs).\\
+- \textbf{Deadblock}: is a situation in which two or more competing actions are
+each waiting for the other to finish, and thus neither ever does. \textbf'{For
+example:} Hold an Wait situation, a process ius currently holding at least one
+resource and requesting additional resources which are being held by other
+resources\\
+- \textbf{Library Misuse}:\\
+- \textbf{Logical error}:  a logic error is a bug in a program that causes
+it to operate incorectly giving the wrong output, but not to terminate
+abnormally(crash). To solve this bug, we should output all the variables to a
+file or on the screen to define error in the code\\
+- \textbf{Usability}: A usability bug is any unintended behavior by the product
+noticed by and impacting the user. \textbf{For example:} the Wii remote control
+detect the wrong motion from the users.\\
+- \textbf{Performance Defects}:	The application doesn't have the performance
+that qualifies the requirement. Performace defects involves things like
+scalability, reliability and resource usage.\\
+- \textbf{Error-handling error}:\\
+- \textbf{Requirement bugs}: misunderstanding the requirement of the
+application\\
+
+
+\subsection{Terminology of bugs:}
+- \textbf{Fault}: static problem in code, eg: unreachable code, in therac,
+entered data is invalide, increment errorCounter instead of setting it to one
+- \textbf{Error}: dynamic problem at runtime, eg: index out of bounds in array,
+also therac 25, the errorCounter got overflows and goes to zero
+- \textbf{Failure}: is the problem of the system. the machine. Eg: Server
+got shutdown, or Ther25 believes it has valid data when it doesn't and shoot a
+beam of radiation.
+- \textbf{Hazard} is the resulting risk that actually happens. Eg: power grid
+goes down, patient dies from radiation overdose
+- \textbf{Faults in dead code}: those does not cause error
+- \textbf{Multiple fauls:} may cause an error together
+- \textbf{ Error:} Error does not always result in a failure to stop the system
+like the example of server shutdown. Instead, the system or application might
+still produce the output. Eg: Therac20- has the same faults, and the same error,
+but there was a hardware override that prevented the failure
+
+\subsection{The cost of defects}\
+\begin{itemize} 
+  \item 20\% of modules cause 80\% of defects. and 50\% are defect free
+  \item \textbf{cost of repair} is potentially increase from 5x to 10x from the
+  requirements to detection phase, somtimes evenmore
+  \item \textbf{Rule of thumb}: 3x to 10x per phase in software lifecyle. 
+\end{itemize}
+ 
+\subsection{Kinds of Quality Assurance}
+ - \textbf{Types:}
+ \begin{itemize}
+   \item Testing:
+   \item Inspection:
+   \item Program analysis
+ \end{itemize}
+ -\textbf{how to stop defect in the first place by Quality Assurance}
+ \begin{itemize}
+   \item getting the requirement right
+   \item getting the design right
+   \item implementing the design properly
+ \end{itemize}
+ - you would never never detect all defects, or prevent all defects\\
+ - \textbf{V \& V}: stands for verification and validation
+ \begin{itemize}
+   \item verification is checking wherether the product matches its
+   requirements
+   \item validation is checking whether the product accomplish its goal
+   \item testing is used to \textbf{verify} the program match the specified test
+   \item \textbf{validate} is used to see if the specified tests are testing the
+   right thing
+ \end{itemize}
+ 
+ \textbf{What kind of precisions of Quality Assurance}\begin{itemize}
+   \item True positive: Quality Assurance detect these, and they exists
+   \item True negative: Quality Assurance says no problem, and there is no
+   problem
+   \item False Positive: Quality Assurance detects problem, but there is no
+   problem
+   \item False Negative: Quality Assurance detecs no problems, but problems
+   exists
+ \end{itemize}
+ -\textbf {Note:} False Positive, when Quality Assurance detect no problems, but
+ there is problem takes a lot of time to investigate because too many of them
+ relative to true positive. 
+ 
+ \subsection{ How to evalutate Quality Assurance}
+ \begin{itemize}
+   \item \textbf{Overall} Cost: Cost of the techniques. Sunk Cost, and Recurring
+   Cost
+   \begin{itemize}
+     \item \textbf{Sunkcost}: are cost of purchasing tools and setting them up.
+     \item \textbf{Recurring Cost}: costs are the cost using the tool and
+     maintaining any resources it needs.
+   \end{itemize}
+   \item \textbf{Bugs Found}: what classes of bugs are found? What is the
+   relative importance of these classes of bugs. What are their relative
+   expensive if the leak into the production code. eg; UI flaw will be very
+   cheap comparing to security bugs( getting sued!)
+   \item \textbf{Bug missed} What classes of bug this technique of Quality
+   Assurance missed. What the cause or reason 
+   \item \textbf{Techniqueover overlap} What other Quality Assurance techniques
+   might find the similar type of bugs
+   \item \textbf{ Cost of fix} what are the cost of fixing a bug once it is
+   found with this technique. 3 things to consider
+   \begin{itemize}
+     \item cost to reproduce the bug for developer
+     \item cost to find the root cause of the bug
+     \item cost to fix the issue
+   \end{itemize}
+   \item \textbf{Stopping Point} determine when to stop using the technique
+   \item \textbf{Intangible benefits}: Question for for this\ldots.
+ \end{itemize}
+ 
+ \subsection{Quality Assurance Plan}
+  - A plan for doing QA helps us to decide what techniques to use, before it's
+  too late. \\
+  - \textbf{ Tetsting techniques}
+  \begin{itemize}
+    \item what will be testing
+    \item how will testing take place
+    \item when will testing take place, when it ends
+    \item who will write the test, who will run them
+    \item why do we believe the set of test is good
+  \end{itemize}
+  - In our plan, we should include the other techniques as well. For example;
+  program analysis, or inspections. We should ask and answer the same question
+  above for testing\\
+  - One more important thing is provide the evidences why this set of QA
+  techniques is good for your project\\
+  -QA should be consious decision, not an accidential oversight
+  
+  
+  % Section 2
+  \section{Testing}
+  \subsection{ Terminologies and Definitions}
+  -\textbf{ Definition}: Direct execution of code on test data in a controlled
+  environment\\
+  - \textbf{Importance}: It only reveals the inconsistencies with
+  specifications. It does not say the program is wrong or specification is
+  wrong. \\
+  - \textbf{goals of testing}:\\
+  \begin{itemize}
+    \item Reveal specific errors.
+    \item Assess the overall quality.
+    \item Verify the legal standards.
+    \item Clarity the application specs and learn more about the program
+  \end{itemize}
+  - Categorize of testing
+  \begin{itemize}
+    \item Visibility
+    \begin{itemize}
+      \item Black Box: These test are made by looking at the specification,
+      withou looking at the internal code
+      \item White Box: These test are made by the knowledge of the code which
+      are the internal control flow and structures
+      \end{itemize}
+    \item Automation:
+    \begin{itemize} 
+      \item Manual testing: keyboard pouding by human
+      \item Automated testing: run by a machine
+      \item Semi-automated testing:
+      \end{itemize}
+  \end{itemize}
+  
+  \subsection{ Unit Testing}
+  - \textbf{Definition}the \" Unit\" implies the level that we are at. In the
+  industry, unit testing is usually considered with method-level, but same principles can be
+  applied at any level which are\\
+  \begin{itemize}
+    \item entire system
+    \item subsystem
+    \item single class
+    \item single method
+  \end{itemize}
+  - \textbf{Properties:}Unit testing is: \\ 
+  \begin{itemize}
+    \item manually to create
+    \item white box
+    \item could be blackbox if devs test to an API
+  \end{itemize}
+  - \textbf{Test Scarffolding}: is a temporary sub-structure software that is
+  used to test some input.\\
+  \begin{itemize}
+    \item provide a way to run the test
+    \item JUnit is a test scaffold: 
+    \item Driver: the component that calls the test
+    \item Stubs: Component that the test calls and return canned data( the
+    actual code that we wrote) \textbf{need more explanation}
+    \item 3 phases of the test
+    \begin{itemize}
+      \item Setup phase: Create all input for the test, or any stubs
+      \item Execute phase: Run the unit under test with the inputs
+      \item Verification phase: Check output against exepcted outputs
+    \end{itemize}
+    \item Notes: 
+    \begin{itemize}
+      \item provide a different test for each different sets of input
+      \item need to control the inputs, includes database things
+      \item build stubs to handle these, stubs don't have to actually work, they
+      are fake data
+      \item verify all parts of the output.
+      \item limit exercise phase to unit, so we can identify the
+      faulty unit(\textbf{explanation})
+      \end{itemize}
+  \end{itemize}
+  
+  \subsection{Regression}
+  \begin{itemize}
+    \item the ability to re-ren your test at a later date
+    \item it will prevent the old bug to recurring
+    \item This is very low cost since you can store and run again at any moment
+    \item Everytime you fix a bug, write the test for it, so you can run it in
+    regression, so you don't re-create that bug again.
+  \end{itemize}
+  
+  \subsection{Test-driven Development}
+  - There are  3 ways you can develop the testing by this way
+  \begin{itemize}
+    \item Write your test first, then develop your code
+    \begin{itemize}
+      \item The tests your write must RUN and they should FAIL
+      \item Ensure that it actually tests something
+      \item Then write code to make it pass
+     \end{itemize}
+    \item Develop your code and then write your test very shortly after
+    \begin{itemize}
+      \item Upside: code is written first. Make stubbing easy because you know
+      what the interface will be
+      \item Downside: Code is written first. You tend to write code to pass it
+      easily
+    \end{itemize}
+    \item Having a dedicated testee write the tests blackbox style
+  \end{itemize}
+  -There are major benefit to this development technique: you will be getting
+  into a testing mindste and purposely trying to break your code
+  
+  \subsection{Coverage}
+   \textbf{Definition:} is the proportion of code covered by your test
+   -Kind of coverage
+   \begin{itemize}
+     \item line coverage
+     \item branch coverage
+     \item path coverage
+   \end{itemize}
+   - 100\% can be very difficult because there are a lot dead code, and code is
+   not important for testing\\
+   - However, coverage lets us see what code we have not yet written a test
+   for\\
+   \subsection{ Input selection}
+   - Do a structual analysis of code and select inputs to exercise each branch
+   or path through the code \\
+   - Use equivalence classes. For example: list , list of 3 elements, list of 1
+   elements, empty list , null list, list of list. \\
+   - Randomly generate input. \\
+   - Automatically generate inputs across space of inputs. \\
+  
+ \section{How to report bugs}
+ \subsection{best practice for reporting bugs}
+ \begin{itemize}
+   \item Provide the reproducing steps
+   \begin{itemize}
+     \item provide detailed and simple steps how to reproduce the bugs
+     \item helps with debugging
+   \end{itemize}
+   \item Be non-atagonistic
+   \begin{itemize}
+     \item Don't blame developers. everone write bugs
+     \item Don't blame the testers. Testers frequently bring bad news.
+   \end{itemize}
+   \item Avoid using defects in performance evaluation( for example: give money
+   to testers if they found find bugs, or punish the devs for bugs)
+   \begin{itemize}
+     \item Do that makde devs not take risks to add features
+     \item Testers can create blakcmarket in bugs
+     \item No one will try to find expensive bugs cuz there are eays one to find
+   \end{itemize}
+   \item identify the root cause
+   \begin{itemize}
+     \item how could this bug be prevented
+     \item Could we discover it earlier
+     \item any other related bugs. If yes, then fix them. Don't make tester find
+     them all .
+   \end{itemize}
+ \end{itemize}
+ 
+ \subsection{ Bug Report Outline}
+ \begin{itemize}
+   \item Repor step: detailed and simple
+   \item Autal ouput comparison with the expected output
+   \item Severity: how severe is the bug? does it crash the system or there is
+   work around
+   \item Priority: how important is the bug? Does it need to be fixed right away
+   \item Status: what is the current status
+   \begin{itemize}
+     \item unconfirmed
+     \item New/ confirmed
+     \item assignend
+     \item resolved
+     \item reopened
+     \item verified
+     \item closed
+    \end{itemize}
+   \item Resolution:
+   \begin{itemize}
+     \item Fixed
+     \item won't fix
+     \item works for me
+     \item duplicate
+    \end{itemize}
+ \end{itemize}
+  
+\end{document}
