@@ -324,4 +324,129 @@ but there was a hardware override that prevented the failure
     \end{itemize}
  \end{itemize}
   
+  
+ \section{ Inspection}
+ \subsection{Definition, Major benefits, inspection vs testing, formal vs
+ informal Inspection}
+ \begin{itemize}
+   \item \textbf{Definition:} Inspections are reviews of software artifacts, the
+   reviews can be formal process or an informal one
+   \item The artifact could be code designs, or specification
+   \item Code reviews are the most common form of inspections
+   \item Majors benefits are:
+   \begin{itemize}
+     \item getting multiple perspectives on the artifacts
+     \item sharing knowledge among team members
+     \item finding defects earlier in the process
+     \item Reducing rework and later effort
+     \item Finding defects that are otherwise hard to detect through automated
+     techniques
+  \end{itemize}
+  \item inpsection vs testing
+  \begin{itemize}
+    \item test a wider range of input
+    \item generally better for \textbf{checking quality attributes ranther than
+    functional defects}
+    \item particularly gooat at \textbf{attributes such as maintainability,
+    evolvability, and scalabality}
+  \end{itemize}
+  \item Formal vs informal inspection
+  \begin{itemize}
+    \item in both, we can use check list so that reviewers dont forget what to
+    look for
+    \item formal reviews takes place as part of meeting with several people
+    \item informal reviews are usually online only and may invole only one or
+    two reviewers
+    \item While formal process can find more defects, it is definitely more
+    expensive
+  \end{itemize}
+ \end{itemize}
+ 
+ \subsection{Formal inspection}
+ \begin{itemize}
+   \item An example formal review process: Fagan-style inspection
+   \item this techniqure require a group of 3 to 7 people
+   \item Team size is larger for documents review and smaller for code review
+   \item Team members have to read code in advance
+   \item Expect people to be able to review 150 to 200 line of code per hour, or
+   3 or 4 pages of code
+   \item Team members have a meeting to discuss, and each member has a role 
+   \begin{itemize}
+     \item moderator organizes the process and keep everyone accountable. The
+     moderator has to ensure the outcome of the meeting happens
+     \item recoder record the log of what is discussed
+     \item reader presents the material to the group, but this can't be the
+     author
+     \item the author can describe the intent of the code and reason for it, but
+     otherwise keeps quiet during the meeting. Sometimes, authour might not
+     attend at all
+   \end{itemize}
+   \item the metting itself should take no longer than 2 hours because the brain
+   of human can only process many line of code in an amount of time
+   \item after the meeting, th moderator folows up with the author to ensure all
+   changes are mde
+ \end{itemize}
+ 
+ \subsection{inFormal inspection}
+ \begin{itemize}
+   \item The process start with the author sends a patch file to a reviewer:
+   \begin{itemize}
+     \item the patch file should be as small as possible, no more than 200 LOC
+     \item Larger changes should be broken into multiple patches
+   \end{itemize}
+   \item the reviewers have to use an online tools to add comments
+   \item the author makes suggested changes or responds to the comments
+   \item when the reviewer is satisfied, the author is cleared to commit their
+   code into the repository
+ \end{itemize}
+ 
+ 
+ 
+ \section{Reliability}
+ \subsection{Definition}
+ \begin{itemize}
+   \item \textbf{ Definition}: Reliability is the realization that, despite your
+   best efforts,error will happen. How do we prevent them from causing failures?
+   \item We need to do an analysis of the inherent risks involved in the system
+   \item These risks are inherent because they provide us with other benefits
+   \item \textbf{inherent risk example}
+   \begin{itemize}
+     \item safety critical devices: Therac25, radiation can kill people, but we
+     use the them to save live of cancer patients
+     \item Interconected enterprises: example is the electric grid which are
+     interconected to each other, we have to face cascade failures with these
+     kind of inherent risk
+     \item End-user interaction: Direct users interaction allow users to have
+     more features and more flexibility. However, we have higher risk due to the
+     uninformed individuals taking actions with high consequence. This could
+     come from the UI defects or user error
+     \item Electronic decision making system: we can save time by using
+     electronic decision like in automobiles or trading. But the consequence
+     happen much faster, perhaps even too fast to be able to mitigate them
+  \end{itemize}
+ \end{itemize}
+ 
+ \subsection{Risk Mitigation}
+ - If we cannot avoid risks entirely, we must consider how to mitigate them. We
+ can either be preventative or reactive
+ \begin{itemize}
+   \item preventative
+   \begin{itemize}
+     \item Inspections can identify before they enter production
+     \item Testing can be used to identify error
+     \item Can also use other coding practices and measurements to prevent
+     faults
+   \end{itemize}
+   \item reactive
+   \begin{itemize}
+     \item dynamically adjust when failures are detected in order to avoid
+     hazards
+     \item Fault tolerant system ( handle multiple errors ) prevents errors
+     causing system wide failure
+   \item Risk management
+   \begin{itemize}
+   \item Risk Coverage
+ \end{itemize}
+ 
+ 
 \end{document}
