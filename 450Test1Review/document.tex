@@ -2,6 +2,7 @@
 %%There is just one section and two subsections.
 \documentclass{article}
 \pagestyle{plain}
+\usepackage{amsmath}
 
 \title{Test 1 Review\\ CS-450}
 \setlength{\footskip}{200pt}
@@ -140,7 +141,7 @@ and states 2 and 3 are final states.\\
 (a) Simulate the 2dfsa and show how the string babb is accepted.\\ 
 (b) Construct the rebound tables and the equivalent 1dfsa partially only for consuming 
 the string babb\\
- \center \begin{tabular}{|c|c|c|}
+ \begin{center} \begin{tabular}{|c|c|c|}
 \hline 
 M & a & b\tabularnewline
 \hline 
@@ -153,9 +154,42 @@ M & a & b\tabularnewline
 \hline 
 4 & 1R &  4L\tabularnewline
 \hline 
-\end{tabular}\\
+\end{tabular}
+ \end{center}
 \pagebreak
 
+{\huge CS-450 \par}
+{\huge Homework \# 3 \\ \par}
+
+Name: Huy Le\\
+
+\underline{Question 1}: Design a DTM to recognize $\{ a^mb^nc^{m+n} |
+m,n > 0 \}$.
+\pagebreak
+
+\underline{Question 2}: Design a DTM to recognize $\{ 0^a1^b0^c | a+c = b$,
+where $a,b,c \geq 0\}$.
+\pagebreak
+
+\underline{Question 3}: Deisign a DTM to compute the function $f(m,n)= m $ MOD
+$ n$, where $m$ and $n$ are positive integers. Note that m and n are represented
+as $0^m$$10^n$ on the input tape initially.
+\pagebreak
+
+\underline{Question 4}: Design a DTM to compute the following function $f(m,n)$
+where both m and n $\geq$ 0. Note that m and n represented as unary numbers and
+separated by a \'1\' on the input tape initialy. The ceiling operator $\lceil x \rceil$
+will return the smallest integer that is greater than or equal to x.
+
+\begin{equation}
+  f(x)=\begin{cases}
+    $\lceil \frac{m}{2} \rceil -1$, & \text{if $\lceil \frac{m}{2} \rceil >
+    n $}.\\
+    0, & \text{otherwise}.
+  \end{cases}
+\end{equation}
+
+\end{document}   
 
 
 

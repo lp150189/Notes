@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.4.28)  29 APR 2013 11:40
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.4.28)  29 APR 2013 11:44
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -24,7 +24,8 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (./document.aux)
+)
+No file document.aux.
 \openout1 = `document.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
@@ -45,7 +46,6 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 7.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 7.
-
 
 LaTeX Warning: No \author given.
 
@@ -102,8 +102,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 265--271
 
 [7] [8] [9] [10] [11] (./document.aux) ) 
 Here is how much of TeX's memory you used:
- 249 strings out of 495059
- 2791 string characters out of 3182030
+ 247 strings out of 495059
+ 2765 string characters out of 3182030
  50977 words of memory out of 3000000
  3505 multiletter control sequences out of 15000+200000
  7895 words of font info for 28 fonts, out of 3000000 for 9000
