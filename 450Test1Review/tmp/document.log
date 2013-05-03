@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.4.28)  29 APR 2013 19:00
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.5.2)  2 MAY 2013 23:18
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -613,40 +613,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--144
 
  []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 162--162
+[9] [10] [11] [12] [13] [14] [15] [16] [17]
+! Misplaced alignment tab character &.
+l.193 ...r \begin{equation}f(m,n) = \frac{m}{n}, &
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
-
- []
-
-[10] [11] [12]
+[18] [19] [20] [21]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.186     $\lceil
-                  \frac{m}{2} \rceil -1$, & \text{if $\lceil \frac{m}{2} \rc...
+l.218     $\lceil
+                  \frac{m}{2} \rceil -n$, & \text{if $\lceil \frac{m}{2} \rc...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.186     $\lceil \frac{m}{2} \rceil -1$, &
+l.218     $\lceil \frac{m}{2} \rceil -n$, &
                                             \text{if $\lceil \frac{m}{2} \rc...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-[13] (./document.aux) ) 
+[22] (./document.aux) ) 
 Here is how much of TeX's memory you used:
- 833 strings out of 495059
- 9227 string characters out of 3182030
+ 830 strings out of 495059
+ 9194 string characters out of 3182031
  58224 words of memory out of 3000000
- 4074 multiletter control sequences out of 15000+200000
- 8707 words of font info for 32 fonts, out of 3000000 for 9000
+ 4071 multiletter control sequences out of 15000+200000
+ 8408 words of font info for 31 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  27i,12n,20p,204b,195s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
@@ -660,10 +661,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy7.pfb>
-Output written on document.pdf (13 pages, 117508 bytes).
+Output written on document.pdf (22 pages, 122059 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 119 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -158,34 +158,66 @@ M & a & b\tabularnewline
  \end{center}
 \pagebreak
 
-{\huge CS-450 \par}
-{\huge Homework \# 3 \\ \par}
+\section{Turing Machine}
 
-Name: Huy Le\\
+\underline{Question 10}: Design DTM for $L = \{ a^nb^n | n\geq 0 \}$
+\pagebreak
 
-\underline{Question 1}: Design a DTM to recognize $\{ a^mb^nc^{m+n} |
+\underline{Question 11}: Design DTM for $\{ ww^r | w \in \{a,b\}^+$ 
+\pagebreak
+
+\underline{Question 12}: Desgin DTM for $ \{ 0^n1^n0^n | n> 0\}$
+\pagebreak
+
+\underline{Question 13}: Design DTM for $\{ x = \{a,b\}^* | N_a(X) = N_b(X)\}$
+\pagebreak
+
+\underline{Question 14}: Desgin DTM for $\{ww | w \in \{a,b\}^* \}$
+\pagebreak
+
+\underline{Question 15}: Design DTM for 
+\begin{equation}
+  f(m,n)=\begin{cases}
+    $m-n$, & \text{if $m>n$}.\\
+    0 & \text{otherwise}.
+  \end{cases}
+\end{equation}
+\pagebreak
+
+\underline{Question 16}: Desgin DTM for $f(m,n) = m+n \forall m,n \geq 0$
+\pagebreak
+
+\underline{Question 17}: Design DTM for $f(m,n) = m * n \forall m,n \geq 0 $
+\pagebreak
+
+\underline{Question 18}: Desgin DTM for \begin{equation}f(m,n) = \frac{m}{n}, &
+\forall m,n \geq 0
+\end{equation}
+\pagebreak
+ 
+\underline{Question 19}: Design a DTM to recognize $\{ a^mb^nc^{m+n} |
 m,n > 0 \}$.
 \pagebreak
 
-\underline{Question 2}: Design a DTM to recognize $\{ 0^a1^b0^c | a+c = b$,
+\underline{Question 20}: Design a DTM to recognize $\{ 0^a1^b0^c | a+c = b$,
 where $a,b,c \geq 0\}$.
 \pagebreak
 
-\underline{Question 3}: Deisign a DTM to compute the function $f(m,n)= m $ MOD
+\underline{Question 21}: Deisign a DTM to compute the function $f(m,n)= m $ MOD
 $ n$, where $m$ and $n$ are positive integers. Note that m and n are represented
 as $0^m$$10^n$ on the input tape initially.
 \pagebreak
 
-\underline{Question 4}: Design a DTM to compute the following function $f(m,n)$
+\underline{Question 22}: Design a DTM to compute the following function $f(m,n)$
 where both m and n $\geq$ 0. Note that m and n represented as unary numbers and
-separated by a \'1\' on the input tape initialy. The ceiling operator $\lceil x \rceil$
-will return the smallest integer that is greater than or equal to x.
+separated by a 1 on the input tape initialy. The ceiling operator $\lceil x
+\rceil$ will return the smallest integer that is greater than or equal to x.
 
 \begin{equation}
-  f(x)=\begin{cases}
-    $\lceil \frac{m}{2} \rceil -1$, & \text{if $\lceil \frac{m}{2} \rceil >
+  f(m,n)=\begin{cases}
+    $\lceil \frac{m}{2} \rceil -n$, & \text{if $\lceil \frac{m}{2} \rceil >
     n $}.\\
-    0, & \text{otherwise}.
+    0 & \text{otherwise}.
   \end{cases}
 \end{equation}
 
