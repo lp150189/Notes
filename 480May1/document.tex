@@ -1,0 +1,149 @@
+%%This is a very basic article template.
+%%There is just one section and two subsections.
+\documentclass{article}
+
+\begin{document}
+
+
+\section{480 Note, May 1st 201}
+
+\subsection{Introduction}
+\textbf{ 60 \% of a program life time comes from}
+\begin{itemize}
+  \item feature change
+  \item bugs
+\end{itemize}
+
+\textbf{ how to improve your code. using the Quality Attributes}
+\begin{itemize}
+  \item Flexibility
+  \item Reusability
+\end{itemize}
+
+- These two attributes hold the highest positions in all the attributes list
+
+\textbf{How do I know if the design is reusable}\\
+- We will use the metric to measure that
+\begin{itemize}
+  \item Coupling
+  \item Cohesion
+  \item Corresponding
+\end{itemize}
+
+\subsection{ Metrics }
+- Measure for how much a class is intra-related
+- Example:\\
+- Hotel Reservation class:
+\underline{ Fields}
+\begin{itemize}
+  \item Date stat
+  \item Date rad
+  \item String name
+  \item int billingCard
+  \item Room roomtype
+\end{itemize}
+\underline{method}
+\begin{itemize}
+  \item reservation(Date, int, int)
+  \item checkin()
+  \item checkout
+  \item addRoomCharges
+\end{itemize}
+
+\textbf{Graph that show the relations between fields and methods}\\
+
+\textbf{ What is the benefit of class doing one thing --Answer: you can reuse it
+easlity, if you have a bug, you know where to find it}\\
+
+\textbf{Cohesion}\\
+\text{Definition:???}\\
+- Low cohesion is bad\\
+- High cohesion is good\\
+
+\textbf{Coupling}\\
+\textbf{Definition: How much are classes related, or depend on each other}\\
+-\underline{ Example:}\\
+if we have classes of A,B,C,D,E and they all related to each other. If we modify
+one class, we will break everything\\
+-\underline{Another example:} HTML is a standard, and Microsoft has an extension
+of HTML, and only IE understands it, you write a program that IE can only
+understand it. So your website is tied to Microsoft, if Microsoft changes
+anything, you have to change it too.\\
+- \textbf{With Coupling we want:}
+\begin{itemize}
+  \item high coupling is very bad
+  \item low coupling is very good
+\end{itemize}
+
+- \textbf{Conclusion:} To make the program good(flexible ,a d Reusability): we
+need to aim for low coupling and high cohesion.\\
+
+\textbf{Example for low coupling or more flexible:} void
+foo(ArrayList<Integer>):
+this is not good because it is too narrow, so instead of using ArrayList, we can use List, or Collection which
+is the interface. So that when you change the passed down object, you don't have
+to change too much.\\
+
+\textbf{Correspondence:}\\
+\textbf{Definition:} How much the require match the requirements. How much it
+match the change of requirement\\
+\textbf{Example:} if you ask web designer for minor change, and it takes too
+much time and effor, then the design is very bad. The programmer didn't think
+much about the changes.\\
+\textbf{ Good Correspondence}\\
+\begin{itemize}
+\item Minor requirement changes only needs low cost in design\\
+\item Major changes changes need high cost to design\\
+\end{itemize}
+
+
+
+
+
+\subsection{Design Principles}
+\begin{itemize}
+  \item Encapsulation
+  \item Information Hiding
+  \item Abstraction
+  \item Inheritance
+  \item Polymorphism
+  \item Substitution
+\end{itemize}
+
+\textbf{Encapsulation}\\
+\textbf{Definition:} is the principle of bundling together the data and code
+that works on that data.\\
+\textbf{Example:} A class that has public fields, public methods. That's
+encapsulation but no information hiding. In C, global variables are
+encapsulation but not information hiding.
+
+\textbf{Information Hiding}: is the principle of hiding the design decisions
+which are most likely to change
+\textbf{Example:} put every fields in your class to be private. Sort( int[]
+arr)\\
+\textbf{Abstraction}: the priciple of describing the essiential features of a
+type without the inessential details. 
+\textbf{Example:} List oppose to ArrayList, Parent object as oppose to the
+subobject
+\textbf{question:} In java, we use classes to do encapsulation and information
+hiding
+\textbf{Note}: you always tend to lean to information hiding for a better
+solution
+
+\textbf{Inheritance and Polymorphsm}: They are very close term. Inheritance
+means sub-class inherit methods and fields from the parent class. Polimorphsm is
+more like when you can have an array of subtract class(Animal ), in that array,
+there are many many type of animals like dog, cat, turtle. 
+\textbf{Substitution}: ???
+\textbf{Pre and post condition is a very important part in Interface.}
+
+\begin{center}
+\textsc{\LARGE{ SO TIRED }}
+\end{center}
+
+\textbf{Example picture:}
+
+
+
+\textbf{}
+\end{document}
