@@ -1,0 +1,93 @@
+%%This is a very basic article template.
+%%There is just one section and two subsections.
+\documentclass{article}
+
+\begin{document}
+
+
+\section{Questions for Test}
+
+\textbf{Question 1:}
+What types of errors are you likely to miss even with 100\%  level
+coverage? Provide two examples and explain
+
+\textbf{Answer:}
+\begin{itemize}
+  \item Performance Defecs: Even if you have 100\% statment level coverage,
+  performance is something that you will likely to miss because the program is
+  required to be tested with a very large input in order to see what performance
+  it has.
+  \item Requirement bugs: bugs are come from missunderstanding the requirement
+  from the program can't be detected even with 100\% coverage, these bugs can
+  only be worked out with discussion among the team, project manager, and the
+  customer in general.
+\end{itemize}
+
+\textbf{Question 2:} What kind of error are surfaced by regression testing.\\
+\textbf{Answer:} Usually human errors in revision. Usually when a programmer
+revive a program, chances are some of the old errors will re-occur. Regression
+will prevent these error effectively.\\
+
+
+\textbf{Question 3:} Error, failure, faults, hazard. Describe the four concepts
+when communicating about a defects. Describe the four concepts and give example
+illustrating the differences. \\
+\textbf{Answer:}\\
+\textbf{Error:} dynamic problem at runtime. \underline{ Eg:} Index out of bounds
+in arrays.\\
+\textbf{Failure:} is the problem of the system or the machine. \underline{ Eg:}
+Therac 25 believes it has valid data when it doesn't and shoot overdose stream
+of radiation.\\
+\textbf{Fault:} static problem in code. \underline{Eg: } increment a field
+instead of setting it to a particular value\\
+\textbf{ Hazard: } The resulting risk that actually happens. \underline{Eg: }
+patient dies because of therac 25 radiation overdose\\
+
+\textbf{Question 4:} How does unit testing improve reliability? Use terminology
+above when answering this question\\
+\textbf{Answer:} Unit testing prevent faults which leads to error from
+happening( testing at different level like method, single class, entire system).
+And since faults is the lowest in the progression of defects, unit testing
+strongly improve reliability. Progression of defects:\\
+\begin{itemize}
+  \item Fault
+  \item Error
+  \item Failure
+  \item Hazard
+  
+  \end{itemize}
+  
+  \textbf{Question 5}: 4 stages of team dynamics, briefly describe the
+  characteristic of each\\
+  \textbf{Answer:} 
+  \begin{itemize}
+    \item \textbf{Forming:} People try to get to know each other, low conflict,
+    low production
+    \item \textbf{Storming:} People working our roles, and find out weakness and
+    strength. Low production, high conflict
+    \item  \textbf{Norming:} group learns how to deal with conflict, become more
+    productive with defined roles. medium conflict, medium production.
+    \item  \textbf{Performing:} Team member understands each other, team's
+    culture is formed. Conflicts are dealt in a way that does not cause personal
+    upset. High production, medium conflicts
+  \end{itemize}
+
+\textbf{Question 6:} Compare Inspection to Analysis\\
+\textbf{1.} Give an example of a defect found more easily with static analysis
+than inspection, and explain why it is better found with static analysis\\
+\textbf{Answer:} Security errors such as buffer overflows are difficult to find
+during inspection because it's hard to look or trace code by hand and easier to
+detect via static analysis tools(design to analyize control and data flow)\\
+\textbf{2.}Give an example of a defect found more eaisly with inspection that
+static analysis, explain why it is better found with inspection\\
+\textbf{Answer:} Issues of scalability are much easier to identify and discuss
+as a team during inspection as opposed to static testing. For instance, more
+efficient algorithms (complexity analysis) may be suggested during inspections
+ whereas a static analysis is not designed to look for such things.\\
+ 
+
+
+
+
+
+\end{document}
